@@ -1,13 +1,13 @@
 <!-- Unit 8 Project
 Requirements
-[  ] Custom Function #1 - Called Multiple Times
-[  ] Custom Function #2 - Takes Parameters
-[  ] Custom Function #3
-[  ] Three new HTML elements/CSS Declarations
+[Yes] Custom Function #1 - Called Multiple Times
+[Yes] Custom Function #2 - Takes Parameters
+[Yes] Custom Function #3
+[Yes] Three new HTML elements/CSS Declarations
 
 Select ONE Additional 
 [ no ] Feature 1 - Include mouseX and mouseY
-[ no ] Feature 2 - Include mouseClicked feature
+[Yes] Feature 2 - Include mouseClicked feature
 [ no ] Feature 3 - Include Animation 
 [ no ] Feature 4 - Include random(__,__) 
 -->
@@ -21,12 +21,31 @@ Select ONE Additional
     <title>Unit 8 Project</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.6.6/processing.min.js"></script>
-    <style></style>
+    <style>
+      .first-sentence {
+        color: red;
+        font-style: italic;
+        text-decoration: underline;
+      }
+
+      body {
+        font-family: monospace;
+        color: blue;
+    </style>
   </head>
 
   <body>
-    <h1>The Ocean</h1>
+    <h1> The Ocean</h1>
+     <div id="official-info">
+      <p>
+        <span class="first-sentence"> Nemo!!!</span>
+        He loves the ocean
+      </p>
+    </div>
     <canvas id="myCanvas" data-processing-sources="myP5Code.pde"> </canvas>
+
+
+   
   </body>
 </html>
 
