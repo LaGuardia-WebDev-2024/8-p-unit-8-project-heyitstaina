@@ -18,19 +18,64 @@ setup = function() {
     drawSq(200, 200, color(200,0,200)); 
     drawSq(300, 200, color(0,200,200));
     drawSq(400, 200, color(247, 2, 100));
-  
+    
+    drawShrimp(200, 200, color(200,0,200)); 
+    drawShrimp(300, 200, color(0,200,200));
+    drawShrimp(400, 200, color(247, 2, 100));
+    
 };
 
-
+var bluemove = 0; //variable to track movement
 //🟢draw Function - will run on repeat
 draw = function(){
+ fill(30,60,30);
+ ellipse(200,200,100,30); //fish
+ ellipse(250,200,10,30);
+
+drawBlue(400,200+blueMove);
+drawBlue(70+blueMove,100);
+drawBlue(300,40-blueMove);
+drawBlue(297-blueMove,330);
+drawBlue(200+blueMove,180+blueMove);
+
+blueMove++;
+if(blueMove > 150){
+blueMove =-200;
+}
+
 
 };
+var count = 0;
 
 //🟢mouseClicked Function - will run when mouse is clicked
 mouseClicked = function(){
 
+
+if(count==0){ 
+drawShrimp(200, 185);
+count=1;
 }
+
+else if (count==1){
+drawShrimp(70, 105);
+count=2;
+}
+else if (count==2){
+drawShrimp(300,45);
+count=3;
+}
+else if(count==3){
+drawShrimp(295,335);
+count=4;
+}
+else{
+drawShrimp(random(0,600), random (0,400));
+drawShrimp(random(0,600), random (0,400));
+drawShrimp(random(0,600), random (0,400));
+drawShrimp(random(0,600), random (0,400));
+drawShrimp(random(0,600), random (0,400));
+}
+};
 
 //🟡drawFish Function - will run when called
 var drawFish = function(fishX, fishY, fishColor){
@@ -58,9 +103,19 @@ var drawPuff = function(puffX, puffY){
 };
 
 var drawSq = function(sqX, sqY){
-  var SqX = random (50,550);
-  var SqY = random (50,350);
+  var sqX = random (50,550);
+  var sqY = random (50,350);
   
   textSize(30);
   text("🦑", sqX, sqY);
 };
+
+var drawShrimp = function(shrimpX, shrimpY) {
+
+  var shrimpX = random (50,550);
+  var shrimpY = random (50,350);
+  
+  textSize(30);
+  text("🦐", shrimpX, shrimpY);
+
+}
