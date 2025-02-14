@@ -28,21 +28,7 @@ setup = function() {
 var bluemove = 0; //variable to track movement
 //🟢draw Function - will run on repeat
 draw = function(){
- fill(30,60,30);
- ellipse(200,200,100,30); //fish
- ellipse(250,200,10,30);
-
-drawBlue(400,200+blueMove);
-drawBlue(70+blueMove,100);
-drawBlue(300,40-blueMove);
-drawBlue(297-blueMove,330);
-drawBlue(200+blueMove,180+blueMove);
-
-blueMove++;
-if(blueMove > 150){
-blueMove =-200;
-}
-
+ 
 
 };
 var count = 0;
